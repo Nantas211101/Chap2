@@ -18,4 +18,4 @@ class ResourceHolder{
 
 };
 
-// #include "../Template/ResourceHolder.inl"
+#include "../Template/ResourceHolder.inl"

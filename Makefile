@@ -5,5 +5,5 @@ compile:
 # g++ -c *.cpp -I "D:\SFML-2.5.1\include
 # ở dưới là cách trên mạng chỉ (nó kêu làm từng cái một)
 	g++ -c ./src/main.cpp -o ./obj/main.o -I "D:\SFML-2.5.1\include"
-	g++ -c ./src/test1.cpp -o ./obj/test1.o -I "D:\SFML-2.5.1\include"
+#	g++ -c ./Template/ResourceHolder.inl -o ./obj/ResourceHolder.o -I "D:\SFML-2.5.1\include"
 
