@@ -4,8 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <map>
 #include <memory>
-const std::string filename =
-    "C:/Users/ADMIN/Pictures/Screenshots/Screenshot (95).png";
+const std::string filename = "C:/Users/ADMIN/Pictures/Screenshots/Screenshot (95).png";
 namespace Textures {
 enum ID { Landscape, Airplane, Missile, DumbPic };
 }

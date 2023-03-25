@@ -2,8 +2,7 @@
 // #include "../Function/Textures.hpp"
 #include "../Function/ResourceHolder.hpp"
 
-const std::string filename =
-    "C:/Users/ADMIN/Pictures/Screenshots/Screenshot (95).png";
+const std::string filename = "C:/Users/ADMIN/Pictures/Screenshots/Screenshot (95).png";
 
 namespace Textures {
 enum ID { Landscape, Airplane, Missile, DumbPic };
