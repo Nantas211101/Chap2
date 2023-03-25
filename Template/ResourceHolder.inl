@@ -11,9 +11,10 @@ void ResourceHolder<Resource, Identifier>::load(Identifier id, const std::string
 
 template <typename Resource, typename Identifier>
 template <typename Parameter>
-void ResourceHolder<Resource, Identifier>::load(Identifier id, const std::string& filename, const Parameter& secondpara) {
+void ResourceHolder<Resource, Identifier>::load(Identifier id, const std::string& filename,
+                                                const Parameter& secondpara) {
     std::unique_ptr<Resource> resource(new Resource());  // new pointer
-    if (!resource->loadFromFile(filename, secondpara))               // loading from file
+    if (!resource->loadFromFile(filename, secondpara))   // loading from file
         throw std::runtime_error("ResourceHolder::load - Failed to load" + filename);
     auto inserted = mResourceMap.insert(std::make_pair(id, std::move(resource)));
     assert(inserted.second);  // checking the succesfull of the insertion
