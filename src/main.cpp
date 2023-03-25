@@ -2,14 +2,17 @@
 // #include "../Function/Textures.hpp"
 #include "../Function/ResourceHolder.hpp"
 
-namespace Textures{
-    enum ID {Landscape, Airplane, Missile, DumbPic};
+const std::string filename =
+    "C:/Users/ADMIN/Pictures/Screenshots/Screenshot (95).png";
+
+namespace Textures {
+enum ID { Landscape, Airplane, Missile, DumbPic };
 }
 
-int main(){
+int main() {
     // TextureHolder textures;
     // textures.load(Textures::DumbPic, filename);
-    
+
     // sf::Sprite playerPlane;
     // playerPlane.setTexture(textures.get(Textures::DumbPic));
 
@@ -22,11 +25,10 @@ int main(){
     sf::RenderWindow mWindow(sf::VideoMode(640, 480), "Test TextureHolder");
     playerPlane.setPosition(100.f, 100.f);
 
-    while(mWindow.isOpen()){
+    while (mWindow.isOpen()) {
         sf::Event event;
-        while(mWindow.pollEvent(event)){
-            if(event.type == sf::Event::Closed)
-                mWindow.close();
+        while (mWindow.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) mWindow.close();
         }
         mWindow.clear();
         mWindow.draw(playerPlane);

@@ -1,21 +1,19 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <memory>
-#include <map>
 #include <assert.h>
-const std::string filename = "C:/Users/ADMIN/Pictures/Screenshots/Screenshot (95).png";
 
+#include <SFML/Graphics.hpp>
+#include <map>
+#include <memory>
 template <typename Resource, typename Identifier>
-class ResourceHolder{
-    public:
-        void                load(Identifier id, const std::string& filename);
+class ResourceHolder {
+   public:
+    void load(Identifier id, const std::string& filename);
 
-        // Resource&           get(Identifier id);
-        Resource&     get(Identifier id) const;
+    // Resource&           get(Identifier id);
+    auto get(Identifier id) const -> Resource&;
 
-    private:
-        std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;
-
+   private:
+    std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;
 };
 
 #include "../Template/ResourceHolder.inl"
