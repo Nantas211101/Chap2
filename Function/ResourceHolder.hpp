@@ -9,6 +9,9 @@ class ResourceHolder {
    public:
     void load(Identifier id, const std::string& filename);
 
+    template <typename Parameter>
+    void load(Identifier id, const std::string& filename, const Parameter& secondpara);
+    
     // Resource&           get(Identifier id);
     auto get(Identifier id) const -> Resource&;
 
